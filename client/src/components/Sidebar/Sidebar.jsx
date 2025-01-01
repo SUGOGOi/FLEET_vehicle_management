@@ -32,9 +32,6 @@ const Sidebar = () => {
                 setIsLogoutLoading(false)
                 setIsLogin(false)
                 navigateTo("/")
-                setTimeout(() => {
-                    window.location.reload();
-                }, 500)
             }
         } catch (error) {
             setIsLogoutLoading(false)

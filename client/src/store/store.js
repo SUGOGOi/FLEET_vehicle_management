@@ -52,5 +52,5 @@ export const useStore = create(
   }))
 );
 
-// export const SERVER_URL = "http://localhost:3000";
-export const SERVER_URL = "https://vehicle-management-server-axkf.onrender.com";
+export const SERVER_URL = "http://localhost:3000";
+// export const SERVER_URL = "https://vehicle-management-server-axkf.onrender.com";

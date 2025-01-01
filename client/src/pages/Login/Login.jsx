@@ -60,7 +60,7 @@ const Login = () => {
             <form className={`login-form ${darkMode ? 'dark' : ''}`} onSubmit={handleLogin}>
                 <h2 className="login-title">Login</h2>
                 <div className="form-group">
-                    <label htmlFor="name">USER ID</label>
+                    <label htmlFor="name">USER ID: example1</label>
                     <input
                         type="text"
                         id="name"
@@ -70,7 +70,7 @@ const Login = () => {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password">Password: example1</label>
                     <input
                         type="password"
                         id="password"
