@@ -70,11 +70,11 @@ export const addVehicle = async (req, res, next) => {
         error: `Vehicle Number Required`,
       });
     } else {
-      const vehicleRegex = /^[A-Z]{2}\s?[0-9]{2}\s?[A-Z]{1,2}\s?[0-9]{4}$/;
+      const normalizedVehicleNumber = vehicleNumber.replace(/\s+/g, "");
+      const vehicleRegex = /^[A-Z]{2}[0-9]{2}([A-Z]{1,2})?[0-9]{4}$/;
 
-      // Test the input against the regex
-      const result = vehicleRegex.test(vehicleNumber);
-      if (result === false) {
+      const result = vehicleRegex.test(normalizedVehicleNumber);
+      if (!result) {
         return res.status(400).json({
           success: false,
           error: `Required Proper vehicle format`,
